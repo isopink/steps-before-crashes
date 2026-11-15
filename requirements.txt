@@ -1,0 +1,7 @@
+geopandas>=0.14
+libpysal>=4.10
+esda>=2.5
+statsmodels>=0.14
+numpy
+pandas
+shapely>=2
