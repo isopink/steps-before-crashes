@@ -84,6 +84,23 @@ designate a zone, and nothing here measures whether an intervention reduces cras
 
 <p align="center"><img src="figures/cards/card_01_sanggye.png" width="720" alt="Diagnosis card for Sanggye-dong"></p>
 
+## Result files
+
+Dong-level aggregates exported from the Data Safe Zone. No cell-level or per-crash rows.
+Column names are in Korean or short codes as produced by the analysis.
+
+| File | What it holds |
+|---|---|
+| [`results/numbers.json`](results/numbers.json) | Every number quoted in the slides, by section |
+| [`results/tables/all_dongs.csv`](results/tables/all_dongs.csv) | All 467 dongs: Poisson and LightGBM rank, predicted crashes, P(≥1), crashes, exposure, hotspot type, protection-zone coverage, observation rate |
+| [`results/tables/inspection_candidates.csv`](results/tables/inspection_candidates.csv) | The 10 priority candidates for January 2025 |
+| [`results/tables/common_hh.csv`](results/tables/common_hh.csv) | The 4 dongs where walking and crashes cluster together |
+| [`results/tables/model_metrics.csv`](results/tables/model_metrics.csv) | MAE, deviance, total ratio and top-10 capture per model |
+| [`results/tables/spatial_cv.csv`](results/tables/spatial_cv.csv) | Capture per held-out region, model vs baseline |
+| [`results/tables/top10_walking_and_crashes.csv`](results/tables/top10_walking_and_crashes.csv) | Top 10 dongs by walking and by crashes |
+| [`results/tables/walking_rank_vs_zones.csv`](results/tables/walking_rank_vs_zones.csv) | Walking rank vs number of senior protection zones (Dobong-gu excluded: no public zone data) |
+| [`docs/dsz_db_info.xlsx`](docs/dsz_db_info.xlsx) | Column definitions of KRD_001 and the LG U+ datasets, from the Data Safe Zone catalogue (sample values masked by the site) |
+
 ## Code
 
 `walkrisk/` is the analysis code from the submission appendix, cleaned into functions.
